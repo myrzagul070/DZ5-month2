@@ -19,12 +19,16 @@ function getMath(...numbers){
 getMath(1, 2, 3, 4, 5, 90, 6, 85)
 
 //3
-function getCoffee() {
-    const drink = prompt('What you would like to drink?').toLowerCase()
-    const message = drink === 'coffee' ? prompt('Which coffee you want to?').toLowerCase() === 'black' || 'with cream' ? 'accepted!'
-        : "Sorry, we don't have this drink!"
-        : "Sorry, we don't have this drink!"
-    alert(message)
+function  getCoffee() {
+    var drinkName = prompt('What do you want to drink?').toLocaleLowerCase()
+    if (drinkName === 'coffee') {
+        var coffee = prompt('How do you want your coffee? black/with cream').toLocaleLowerCase()
+        coffee === 'black'
+            ? alert('One black coffee coming right up!')
+            : coffee === 'with cream'
+                ? alert('One black with cream coming right up!')
+                : alert("Sorry, we don't have")
+    }
 }
 getCoffee()
 
